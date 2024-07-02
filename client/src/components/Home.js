@@ -13,7 +13,7 @@ function Home() {
             }
     })
     .catch(err=>console.log(err))
-  },[])
+  },[navigate])
   return (
     <div>Home</div>
   )
