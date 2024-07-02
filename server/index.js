@@ -23,6 +23,11 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(route)
 
+// Add root route
+app.get('/', (req, res) => {
+  res.send('Hello, World!');
+});
+
 const PORT=process.env.PORT || 4500;
 connectDB().then(()=>{
     const server=app.listen(PORT,()=>{
