@@ -13,7 +13,7 @@ function Login() {
     const handleSubmit = (e) => {
         e.preventDefault();
         setError(''); // Clear previous errors
-        axios.post('http://localhost:4000/login', { name, password })
+        axios.post(`${process.env.REACT_APP_BACKEND_URL}/login`, { name, password })
             .then(result => {
                 console.log(result);
                 if (result.data === "Login successful") {

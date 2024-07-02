@@ -12,7 +12,7 @@ function Signup() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        axios.post('http://localhost:4000/register', { name, email, password })
+        axios.post(`${process.env.REACT_APP_BACKEND_URL}/register`, { name, email, password })
             .then(result => {
                 console.log(result);
                 if(result.data === "User already exists"){

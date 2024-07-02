@@ -9,7 +9,7 @@ function ResetPw() {
     const {id,token}=useParams();
     const handleSubmit=(e)=>{
         e.preventDefault()
-        axios.post(`http://localhost:4000/reset-password/${id}/${token}`,{password})
+        axios.post(`${process.env.REACT_APP_BACKEND_URL}/reset-password/${id}/${token}`,{password})
         .then(res=>{
             if(res.data.Status === "success"){
                 navigate('/login')

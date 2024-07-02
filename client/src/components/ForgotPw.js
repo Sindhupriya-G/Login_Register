@@ -10,7 +10,7 @@ function ForgotPw() {
     const handleSubmit=(e)=>{
         e.preventDefault()
         console.log('sending email:',email);
-        axios.post('http://localhost:4000/forgot-password',{email})
+        axios.post(`${process.env.REACT_APP_BACKEND_URL}/forgot-password`,{email})
         .then(res=>{
             console.log('response:',res.data);
             if(res.data.Status === "success"){

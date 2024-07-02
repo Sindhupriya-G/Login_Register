@@ -6,7 +6,7 @@ function Home() {
   const navigate=useNavigate();
   axios.defaults.withCredentials=true;
   useEffect(()=>{
-    axios.get('http://localhost:4000/home')
+    axios.get(`${process.env.REACT_APP_BACKEND_URL}/home`)
     .then(result => {console.log(result);
         if(result.data !== "success"){
              navigate('/login');
