@@ -4,7 +4,7 @@ import { signUp,login,verifyUSer,home, forgetPw, resetPw } from "../controllers/
 
 const route=express.Router()
 
-route.post('/register',signUp)
+route.post('/',signUp)
 route.post('/login',login)
 route.get('/home',verifyUSer,home)
 route.post('/forgot-password',forgetPw)
