@@ -11,8 +11,8 @@ config();
 // app.use(cors())
 // Enable CORS for all routes
 app.use(cors({
-   // origin: 'http://localhost:3000',  // Allow only your frontend application
-    origin: 'https://login-register-app-lhw5.onrender.com/',
+   origin: 'http://localhost:3000',  // Allow only your frontend application
+    // origin: 'https://login-register-app-lhw5.onrender.com/',
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials: true,
     allowedHeaders: ['Content-Type', 'Authorization']
