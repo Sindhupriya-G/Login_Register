@@ -24,10 +24,19 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(route)
 
-// Add root route
-app.get('/', (req, res) => {
-  res.send('Hello, World!');
+// // Add root route
+// app.get('/', (req, res) => {
+//   res.send('Hello, World!');
+// });
+
+// Serve static files from the build directory
+app.use(express.static(path.join(path.resolve(), 'build')));
+
+// Handle unknown routes and serve index.html
+app.get('*', (req, res) => {
+  res.sendFile(path.join(path.resolve(), 'build', 'index.html'));
 });
+
 
 const PORT=process.env.PORT || 4500;
 connectDB().then(()=>{
