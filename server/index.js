@@ -30,11 +30,11 @@ app.use(route)
 // });
 
 // Serve static files from the build directory
-app.use(express.static(path.join(path.resolve(), 'build')));
+app.use(express.static(path.join(path.resolve(),'client' .'build')));
 
 // Handle unknown routes and serve index.html
 app.get('*', (req, res) => {
-  res.sendFile(path.join(path.resolve(), 'build', 'index.html'));
+  res.sendFile(path.join(path.resolve(),'client', 'build', 'index.html'));
 });
 
 
