@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import {toast,ToastContainer} from 'react-toastify'
+import {toast} from 'react-toastify'
 
 function Login() {
     const [name, setName] = useState('');
@@ -14,7 +14,7 @@ function Login() {
         e.preventDefault();
         setError(''); // Clear previous errors
         axios.post(`${process.env.REACT_APP_BACKEND_URL}/login`, { name, password })
-            .then(result => {
+            .then(result => {git
                 console.log(result);
                 if (result.data === "Login successful") {
                     navigate('/Home'); // Successful login
