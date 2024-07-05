@@ -19,8 +19,8 @@ app.use(cors({
   origin: function (origin, callback) {
       console.log('Request origin:', origin); // Log the origin
       // Allow requests from localhost:3000 and your deployment URL
-      // const allowedOrigins = ['http://localhost:3000', 'https://login-register-app-lhw5.onrender.com'];
-      const allowedOrigins = 'http://localhost:3000';
+      const allowedOrigins = ['http://localhost:3000', 'https://login-register-app-lhw5.onrender.com'];
+    //   const allowedOrigins = 'http://localhost:3000';
 
       if (!origin || allowedOrigins.includes(origin)) {
           callback(null, true);

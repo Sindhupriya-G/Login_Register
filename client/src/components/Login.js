@@ -14,7 +14,7 @@ function Login() {
         e.preventDefault();
         setError(''); // Clear previous errors
         axios.post(`${process.env.REACT_APP_BACKEND_URL}/login`, { name, password })
-            .then(result => {git
+            .then(result => {
                 console.log(result);
                 if (result.data === "Login successful") {
                     navigate('/Home'); // Successful login
