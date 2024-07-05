@@ -76,3 +76,5 @@ transporter.sendMail(mailOptions, function(error, info){
     console.log('Email sent: ' + info.response);
   }
 });*/
+
+// https://login-register-2-api-jtim.onrender.com
